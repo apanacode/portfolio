@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="https://kit.fontawesome.com/4c6a7543eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+      <h4 class="logo">MY PORTOFOLIO</h4>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>FRONTEND DEVELOPER</p>
+        <H2>Hi, I'm <span>Lokesh</span> <br>From <span style="color: rgba(255, 55, 0, 0.759);">IN</span>I<span style="color: rgb(126, 232, 126);">DA</span></H2>
+      </div>
+    </div>
+  </div>
+
+  <!-- -----------about---------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="passport(lokesh).jpg" alt="mypicture">
+        </div>
+        <div class="about-col-2">
+          <h2 class="sub-title">About me</h2>
+          <p>To learn and gain new experience while utilizing my interpersonal skills to help achieve business goals. Excellent analytical and developmental skills for a software enginner role. Looking to work for a dynamic organization with opportunities for career growth . Quick learner and problem solver.</p>
+          <br>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+            <p class="tab-links"onclick="opentab('education')">Education</p>
+          </div>
+         <div class="tab-contents active-tab " id="skills">
+          <ul>
+            <li><span>Frontend Languages</span><br>HTML,CSS,JAVASCRIPT</li>
+            <li><span>Backend Languages</span><br>C, JAVA, PYTHON</li>
+            <li><span>Database</span><br>MySQL,MongoDB</li>
+            <li><span>Technology</span><br>Mern stack</li>
+          </ul>
+         </div>
+         <div class="tab-contents"id="projects">
+          <ul>
+            <li><span>Shipyard System Project</span><br>It aims to streamline maritime operations by centralizing vessel management, maintenance tracking, and resource alloction process</li>
+            <li><span>Immigrants GeoInsight</span><br>-	Developed using K means clustering on Geolocational data to recommend accommodations to immigrants to a city.</li>
+            <li><span>Cricket Acadmey Management System</span><br>The focus has been on efficient management of player registration, scheduling of coaching sessions and tracking of player progress which is based on CRUD operations</li>
+          
+          </ul>
+         </div>
+         <div class="tab-contents"id="education">
+          <ul>
+            <li><span>2023</span><br>Masters of Computer Application at Andhra University</li>
+            <li><span>2021</span><br>Bacherlors of Computer Science at Andhra University</li>
+            <li><span>2018</span><br>Intermediate from Narayana JR College</li>
+            <li><span>2016</span><br>Secondary Education from Universal High School</li>
+          </ul>
+         </div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- -------------Myprojects-------------- -->
+  <div id="Projects">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="projects-list">
+<div>
+  <i class="fa-solid fa-ship"></i>
+  <h2>SHIPYARD SYSTEM MANGAEMENT</h2>
+  <P>It aims to streamline maritime operations by centralizing vessel management, maintenance tracking, and resource alloction proces</P>
+  <a href="#">Learn more</a>
+</div>
+<div>
+  <i class="fa-solid fa-earth-americas"></i>
+  <h2>IMMIGRANTS GEOINSIGHT</h2>
+  <P>Developed using K means clustering on Geolocational data to recommend accommodations to immigrants to a city</P>
+  <a href="#">Learn more</a>
+</div>
+<div>
+  <i class="fa-solid fa-code"></i>
+  <h2>WEB DEVELOPMENT</h2>
+  <P>The focus has been on efficient management of player registration, scheduling of coaching sessions and tracking of player progress which is based on CRUD operations</P>
+  <a href="#">Learn more</a>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------contact me --------------- -->
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h2 class="sub-title">Contact Me</h2>
+          <p><i class="fa-regular fa-paper-plane"></i> sammengi.sailokesh@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>+91 7997193781</p>
+          <div class="social-icons">
+            <a href="https://facebook.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/apanacode"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sammengi-sai-lokesh/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="/FrontendResume.docx" download  class="btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name ="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn2 btn">Submit</button>
+          </form>
+          <span id="message"></span>
+        </div>
+      </div>
+    </div>
+      <!-- -------------copyright-------------- -->
+    <div class="copyright">
+      <p >copyright <i class="fa-regular fa-copyright"></i> Lokesh.Sammengi</p>
+    </div>
+  </div>
+
+
+ <!-- ----------------javascript----------------- -->
+
+
+
+  <script>
+     var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }   
+  </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwVs66G19exnAauR-4umqRD8eZGhvpDAVB3e-cz-z3gKKjXdsm5RKchUb2XWJJNWxfA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("message")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        msg.innerHTML="Message sent successfully ";
+        setTimeout(function(){
+          msg.innerHTML=""
+        },5000)      
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
